@@ -1,3 +1,10 @@
+:root {
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --secondary-color: rgba(229, 148, 0, 0.9);
+    --overlay-color: rgba(24, 39, 551, 0.85);
+    --menu-speed: 0.75s;
+}
+
 body {
     color: white;
     margin: 0;
@@ -19,6 +26,8 @@ p {
     padding: 1rem;
 }
 
+
+/* Button */
 .btn {
     margin: 1rem;
     padding: 1rem 2rem;
@@ -65,8 +74,12 @@ p {
     padding: 4px 6px;
 }
 
+.container {
+    max-width: 960px;
+}
+
 #page-1 {
-    background: rgb(80, 127, 207);
+    background: var(--primary-color);
     opacity: .98;
     height: 100vh;
     display: flex;
