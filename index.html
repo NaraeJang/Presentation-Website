@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Website</title>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/89a07df7f5.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="page-1" class="page1-bg">
+            <h1>Welcome To My Presentation</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates sunt rem veniam repellendus quaerat,
+                tempora, quo consequuntur dicta architecto vero unde illum ipsa perspiciatis modi reprehenderit facere
+                corporis deleniti beatae?</p>
+            <a href="#page-2" class="btn btn-dark">Next Page <i class="fa-solid fa-arrow-circle-down"></i></a>
+    </section>
+
+    <section id="page-2">
+        <h1>Page 2</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates sunt rem veniam repellendus quaerat,
+            tempora, quo consequuntur dicta architecto vero unde illum ipsa perspiciatis modi reprehenderit facere
+            corporis deleniti beatae?</p>
+            <div class="btn-group">
+                <a href="#page-1"  class="btn btn-dark"><i class="fa-solid fa-arrow-circle-up"></i> Previous Page</a>
+                <a href="#page-3"  class="btn btn-light">Next Page <i class="fa-solid fa-arrow-circle-down"></i></a>
+            </div>
+    </section>
+
+    <section id="page-3">
+        <h1>Page 3</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates sunt rem veniam repellendus quaerat,
+            tempora, quo consequuntur dicta architecto vero unde illum ipsa perspiciatis modi reprehenderit facere
+            corporis deleniti beatae?</p>
+            <div class="btn-group">
+                <a href="#page-2"  class="btn btn-dark"><i class="fa-solid fa-arrow-circle-up"></i> Previous Page</a>
+                <a href="#page-1"  class="btn btn-light">Return to Page 1 <i class="fa-solid fa-arrow-circle-down"></i></a>
+            </div>
+    </section>
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+
+
+    <script>
+        // Smooth Scrolling
+      $('#navbar a, .btn').on('click', function (e) {
+        if (this.hash !== '') {
+          e.preventDefault();
+
+          const hash = this.hash;
+
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800
+          );
+        }
+      });
+    </script>
+</body>
+
+</html>
